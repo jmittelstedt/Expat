@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Signin</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Project2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div class="topnav">
+                <input type="text" placeholder="Search..">
+            </div>
+            <header>Sign In</header>
+            <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <label for="myusername"><b>Username: *</b></label>
+                <input type="text" name="myusername" id="myusername" placeholder="Enter your Username: " required>
+                <label for="mypassword"><b>Password: *</b></label>
+                <input type="email" name="mypassword" id="mypassword" placeholder="Enter your Password: " required>
+                <input type="submit" value="Log In">
+                <input type="submit" value="Cancel">
+            </form> 
+        <footer>
+            <div>
+                <button id="homeid" type="button" style="float:left" onclick="document.location='index.html'">Home</button>
+                <button id="aboutid" type="button" style="float:left">About</button>
+                <button id="termsid" type="button" style="float:left">Terms</button>
+                <button id="helpid" type="button" style="float:left">Help</button>
+                <button id="ppid" type="button" style="float:right">Privacy Pollicy</button>
+            </div>
+        <small>
+            <i> Copyright &copy; 2025 ExpatForum <br> <a href = "mailto:jm00662@my.westga.edu">Jason@Mittelstedt.com</a>
+            </i>
+            <a href="sitemap.html">Sitemap</a>
+        </small>
+        <div>
+            <script>
+                document.write("This page was last modified on: ");
+                document.write(document.lastModified);
+            </script>
+            </div>
+    </footer>
+    </body>

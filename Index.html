@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ExpatForum</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Project2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div style="text-align: center;margin-bottom: 20px">
+            <header>Expat</header>
+            <h1>Expat Forum For People Moving Overseas And Living Abroad Since 2007</h1>
+        </div>
+        <div class="outer" style="text-align: center; border: 2px solid #007bff; margin-bottom: 20px"> 
+            <div class="inner"><img src="Images/StockCake-expat_forum_Images_and_Photos_1764467478.jpg" alt="Logo"></div>
+            <div class="inner" style="text-align: center; margin-bottom: 20px">
+                <h1>Welcome</h1>
+                <h3>A forum community dedicated to expatriates and enthusiasts. 
+                <br> Come join the discussion about residency, taxes, visas, travel, health care, banking, classifieds, and more!</h3>
+                <input type="text" style="display:inline-block; text-align: center; border-radius: 10px; height:30px" placeholder="&#128269; Search..">
+            </div>
+            <div class="inner">
+                <button id="joinid" type="button" style="float:left; text-align: center; border-radius: 10px; height:30px" onclick="document.location='profile.html'">Join</button>
+                <br>
+                <br>
+                <button id="memberid" type="button" style="float:left; text-align: center; border-radius: 10px; height:30px" onclick="document.location='signin.html'">Member Login</button>
+            <br> <br> <b><p>Please select the country</p></b>
+            <input type="text" id="countryInput" placeholder="Country" list="countries" oninput="showDiv()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+            <datalist id="countries">
+                    <option value="Angola"></option>
+                    <option value="Australia"></option>
+                    <option value="Belize"></option>
+                    <option value="Brazil"></option>
+                    <option value="Canada"></option>
+                    <option value="China"></option>
+                    <option value="Cuba"></option>
+                    <option value="Denmark"></option>
+                    <option value="Egypt"></option>
+                    <option value="France"></option>
+                    <option value="Germany"></option>
+                    <option value="Haiti"></option>
+                    <option value="India"></option>
+                    <option value="Japan"></option>
+                    <option value="Kenya"></option>
+                    <option value="Libya"></option>
+                    <option value="Madagascar"></option>
+                    <option value="Malawi"></option>
+                    <option value="Malaysia"></option>
+                    <option value="Maldives"></option>
+                    <option value="Mali"></option>
+                    <option value="Malta"></option>
+                    <option value="Norway"></option>
+                    <option value="Oman"></option>
+                    <option value="Peru"></option>
+                    <option value="Qatar"></option>
+                    <option value="Russia"></option>
+                    <option value="Spain"></option>
+                    <option value="Thailand"></option>
+                    <option value="Ukraine"></option>
+                    <option value="Vietnam"></option>
+                    <option value="Yemen"></option>
+                    <option value="Zambia"></option>
+                </datalist>
+            </div>       
+            </div>
+        <div style="text-align: right; text-align: center; border: 2px solid #007bff; margin-bottom: 20px">
+            <h1>What’s New</h1>
+            <div id="myLink" style="display:none; margin-top:10px; padding: 50px;">
+                <a href="https://ugeduhub.com/in-demand-courses/physical-therapy-physiotherapy/" target="_blank">
+                    How to Become a Physiotherapist in Malaysia
+                </a>
+            </div>
+            <script>
+                
+
+                window.onload = function() {
+                    showHide();
+                }
+
+
+                function showHide() {
+                    let country=localStorage.getItem("country");
+                    const elements = document.getElementsByClassName('show-noshow');
+
+                    if (country === "Malaysia") {
+                        for (let i = 0; i < elements.length; i++) {
+                                elements[i].style.display = 'block'; // ✅ Show link
+                            }
+                            
+                        } else {
+                            for (let i = 0; i < elements.length; i++) {
+                                elements[i].style.display = "none"; // ✅ Hide link
+                            }
+                        }
+                }
+
+                function showDiv() {
+                    const country = document.getElementById("countryInput").value;
+                    localStorage.setItem("country", country);
+                    showHide();
+                }
+                function showHealth() {
+                    const health = document.getElementById("healthInput").value;
+                    const country = document.getElementById("countryInput").value;
+                    
+                    if (country === "Malaysia" && health === "Therapy") {
+                       window.location.href = "malaysia.html";
+                    } else {
+                        window.location.href = "oops.html";
+                    }
+                }
+                function showOops() {
+                    window.location.href = "oops.html";
+                }
+            </script>
+            <div class="grid-outer">
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Recent</h2>
+                <p class="show-noshow">Malaysia, celebrate delivery of first RTS link train ahead of 2026 opening</p>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>New Members</h2>
+                <ul class="show-noshow">
+                        <li class="show-noshow">TondraAshville</li>
+                        <li class="show-noshow">JoeSchmo</li>
+                        <li class="show-noshow">BartSimpson</li>
+                    </ul>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>News</h2>
+                    <p class="show-noshow"><b>Breaking News!</b> Airports: KLIA T1 begins full enforcement of ten minute curbside rule today</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; border: 2px solid #007bff; margin-bottom: 20px">
+            <h1>Information</h1>
+            <div class="grid-outer">
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Living</h2>
+                <input class="show-noshow" type="text" id="livingInput" placeholder="Living" list="living" oninput="showOops()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+                <datalist id="living">
+                    <option value="Climate"></option>
+                    <option value="Cost"></option>
+                    <option value="Housing"></option>
+                    <option value="Traffic"></option>
+                    <option value="Other"></option>
+                </datalist>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Money</h2>
+                <input class="show-noshow" type="text" id="moneyInput" placeholder="Money" list="money" oninput="showOops()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+                <datalist id="money">
+                    <option value="Banking"></option>
+                    <option value="Coins"></option>
+                    <option value="Currency"></option>
+                    <option value="Taxes"></option>
+                    <option value="Tipping"></option>
+                </datalist>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Social</h2>
+                <input class="show-noshow" type="text" id="socialInput" placeholder="Social" list="social" oninput="showOops()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+                <datalist id="social">
+                    <option value="Customs"></option>
+                    <option value="Dating"></option>
+                    <option value="Education"></option>
+                    <option value="Jobs"></option>
+                    <option value="Religion"></option>
+                </datalist>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Health</h2>
+                <input class="show-noshow" type="text" id="healthInput" placeholder="Health" list="health" oninput="showHealth()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+                <datalist id="health">
+                    <option value="Clinic"></option>
+                    <option value="Diseases"></option>
+                    <option value="Hospital"></option>
+                    <option value="Medical"></option>
+                    <option value="Pharmacy"></option>
+                    <option value="Therapy"></option>
+                    <option value="Vaccination"></option>
+                </datalist>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Laws</h2>
+                <input class="show-noshow" type="text" id="lawsInput" placeholder="Laws" list="laws" oninput="showOops()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+                <datalist id="laws">
+                    <option value="Bankruptcy"></option>
+                    <option value="Common"></option>
+                    <option value="Criminal"></option>
+                    <option value="Drug"></option>
+                    <option value="Employment"></option>
+                    <option value="Reale E State"></option>
+                    <option value="Religion"></option>
+                </datalist>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Transportation</h2>
+                <input class="show-noshow" type="text" id="transportationInput" placeholder="Transportation" list="transportation" oninput="showOops()" style="display:inline-block; text-align: center; border-radius: 10px; height:30px">
+                <datalist id="transportation">
+                    <option value="Airline"></option>
+                    <option value="Buses"></option>
+                    <option value="Roads"></option>
+                    <option value="Taxis"></option>
+                    <option value="Trains"></option>
+                    <option value="Other"></option>
+                </datalist>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; border: 2px solid #007bff; margin-bottom: 20px">
+            <h1>Things To Do</h1>
+            <div class="grid-outer">
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Art</h2>
+                <ul class="show-noshow">
+                        <p class="show-noshow">National Art Gallery</p>
+                        <p class="show-noshow">Art Market Malaysia</p>
+                        <p class="show-noshow">ArtisanMalaysia.com</p>
+                    </ul>
+                    <div class="show-noshow"><img src="Images/StockCake-malaysian_art_Images_and_Photos_1764720693.jpg" alt="Art"></div>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Music</h2>
+                <div class="show-noshow"><img src="Images/StockCake-malaysian_music_Images_and_Photos_1764720490.jpg" alt="Music"></div>
+                </div>
+                <div class="grid-inner" style="border: 2px solid #000000;"><h2>Sites</h2>
+                <p class="show-noshow">Genting Highlands & Batu Caves</p>
+                <div class="show-noshow"><img src="Images/StockCake-malaysia_sites_Images_and_Photos_1764720939.jpg" alt="Sites"></div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; border: 2px solid #007bff; margin-bottom: 20px">
+            <h1>FAQ</h1>
+            <p>This is where the FAQ go</p>
+        </div>
+        <div style="text-align: center; border: 2px solid #007bff; margin-bottom: 20px">
+            <h1>Discussion Forums</h1>
+            <button id="postid" type="button" onclick="document.location='post.html'">Post</button>
+        </div>
+        <br>
+        <footer>
+            <div>
+                <button id="homeid" type="button" style="float:left" onclick="document.location='index.html'">Home</button>
+                <button id="aboutid" type="button" style="float:left">About</button>
+                <button id="termsid" type="button" style="float:left">Terms</button>
+                <button id="helpid" type="button" style="float:left">Help</button>
+                <button id="ppid" type="button" style="float:right">Privacy Pollicy</button>
+            </div>
+        <small>
+            <i> Copyright &copy; 2025 ExpatForum <br> <a href = "mailto:jm00662@my.westga.edu">Jason@Mittelstedt.com</a>
+            </i>
+            <a href="sitemap.html">Sitemap</a>
+        </small>
+        <div>
+            <script>
+                document.write("This page was last modified on: ");
+                document.write(document.lastModified);
+            </script>
+            </div>
+    </footer>
+    </body>
+</html>

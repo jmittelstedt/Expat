@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Post</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Project2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <header> ExpatForum</header>
+            <h1>Discussion Post</h1>
+            <form method="post" action="PostSuccess.html" style="margin-top: 20px">
+                <input type="submit" value="Post">
+                <label for="myposttitle"></label>
+                <input type="text" name="myposttitle" id="myposttitle" placeholder="Type your title here" required>
+                <label for="myPost">Post: </label>
+                <textarea name="myPost" id="myPost" rows="10" cols="50" placeholder="Type your post here" required></textarea>
+            </form>
+            <form method="post" action="Index.html">
+                <input type="submit" value="Cancel">
+            </form>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <div class="icon-bar">
+                <a class="active" href="#"><i class="fa fa-home"></i></a>
+                <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
+                <a href="#"><i class="fa fa-thumbs-o-down"></i></a>
+                <a href="#"><i class="fa fa-trash"></i></a>
+            </div>
+            
+    <footer>
+        <div>
+                <button id="homeid" type="button" style="float:left" onclick="document.location='index.html'">Home</button>
+                <button id="aboutid" type="button" style="float:left">About</button>
+                <button id="termsid" type="button" style="float:left">Terms</button>
+                <button id="helpid" type="button" style="float:left">Help</button>
+                <button id="ppid" type="button" style="float:right">Privacy Pollicy</button>
+            </div>
+        <small>
+            <i> Copyright &copy; 2025 ExpatForum <br> <a href = "mailto:jm00662@my.westga.edu">Jason@Mittelstedt.com</a>
+            </i>
+            <a href="sitemap.html">Sitemap</a>
+        </small>
+        <div>
+            <script>
+                document.write("This page was last modified on: ");
+                document.write(document.lastModified);
+            </script>
+            </div>
+    </footer>
+    </body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Profile</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Project2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <header> ExpatForum</header>
+            <h1>Profile</h1>
+            <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px;">
+            <img src="Images/StockCake-expat_forum_Images_and_Photos_1764467478.jpg" alt="Expat">
+            <form method="post" action="ProfileSuccess.html">
+                            <label for="myname"><b>Name: *</b></label>
+                            <input type="text" name="myname" id="myname" required>
+                            <label for="myemail"><b>E-mail: *</b></label>
+                            <input type="email" name="myemail" id="myemail" required>
+                            <label for="myjoin"><b>Join Date: *</b></label>
+                            <input type="date" name="myjoin" id="myjoin" required>
+                            <label for="mydob">DOB Date: </label>
+                            <input type="date" name="mydob" id="mydob">
+                            <label for="myprefername">Prefer Name: </label>
+                            <input type="text" name="myprefername" id="myprefername">
+                            <label for="mylanguage">Language: </label>
+                            <input type="text" name="mylanguage" id="mylanguage">
+                            <label for="myreligion">Religion: </label>
+                            <input type="text" name="myreligion" id="myreligion">
+                            <label for="mycountryto"><b>Country To: *</b></label>
+                            <input type="text" name="mycountryto" id="mycountryto" required>
+                            <label for="mycountryfrom"><b>Country From: *</b></label>
+                            <input type="text" name="mycountryfrom" id="mycountryfrom" required>
+                            <label for="myAddress">Address: </label>
+                            <textarea name="myAddress" id="myAddress" rows="10" cols="20"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+
+                        <form method="post" action="Index.html">
+                            <input type="submit" value="Cancel">
+                        </form>
+                </div>
+    
+    <footer>
+        <div>
+                <button id="homeid" type="button" style="float:left" onclick="document.location='index.html'">Home</button>
+                <button id="aboutid" type="button" style="float:left">About</button>
+                <button id="termsid" type="button" style="float:left">Terms</button>
+                <button id="helpid" type="button" style="float:left">Help</button>
+                <button id="ppid" type="button" style="float:right">Privacy Pollicy</button>
+            </div>
+        <small>
+            <i> Copyright &copy; 2025 ExpatForum <br> <a href = "mailto:jm00662@my.westga.edu">Jason@Mittelstedt.com</a>
+            </i>
+            <a href="sitemap.html">Sitemap</a>
+        </small>
+        <div>
+            <script>
+                document.write("This page was last modified on: ");
+                document.write(document.lastModified);
+            </script>
+            </div>
+    </footer>                
+    </body>
